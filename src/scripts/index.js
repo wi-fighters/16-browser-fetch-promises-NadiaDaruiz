@@ -5,3 +5,17 @@ import '../styles/main.scss';
 
 // \/ All of your javascript should go here \/
 
+const modalBox = document.getElementById('myModal');
+const closeBox = document.querySelector('.close');
+
+new Promise((resolve) => {
+    setTimeout(() => {
+        resolve(modalBox)
+    }, (1000 * 60))
+});
+
+then(() => {
+    modalBox.style.display = 'block';
+})
+
+closeBox.addEventListener('click', () => modalBox.style.display = 'none')
